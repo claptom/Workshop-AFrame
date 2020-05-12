@@ -29,6 +29,7 @@ myOtherBox.addEventListener('mouseleave', function(){
  */
 
  var growspeed = 1.2;
+ var spinspeed = 1.2;
 
  function grow(){
  	myOtherBox.object3D.scale.x *= growspeed;
@@ -37,7 +38,16 @@ myOtherBox.addEventListener('mouseleave', function(){
   console.log(myOtherBox.object3D.scale);
  }
 
+ function spinFaster(){
+ 	myOtherBox.object3D.rotation.x *= spinspeed;
+ 	myOtherBox.object3D.rotation.y *= spinspeed;
+ 	myOtherBox.object3D.rotation.z *= spinspeed;
+  console.log(myOtherBox.object3D.rotation);
+ }
+
+
  myOtherBox.addEventListener('click', function(){ // uses a fuse
  	grow();
+	spinFaster();
  	console.log('grew');
  });
