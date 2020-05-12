@@ -39,10 +39,7 @@ myOtherBox.addEventListener('mouseleave', function(){
  }
 
  function spinFaster(){
- 	myOtherBox.object3D.rotation.x += spinspeed;
- 	myOtherBox.object3D.rotation.y += spinspeed;
- 	myOtherBox.object3D.rotation.z += spinspeed;
-  console.log(myOtherBox.object3D.rotation);
+ 	rotationSpeed *= spinspeed;
  }
 
 
